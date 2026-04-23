@@ -1,0 +1,163 @@
+# 🤟 Sign Language Detection System
+
+> A deep learning-based system that detects sign language gestures from video input and translates them into words — bridging communication for the hearing-impaired community.
+
+---
+
+## 📌 Overview
+
+This project implements a **Sign Language Gesture Recognition** system using Convolutional Neural Networks (CNN). It processes video input, identifies hand gestures frame by frame, and maps each gesture to its corresponding word — making communication more accessible for people with hearing impairments.
+
+---
+
+## 🎯 Motivation
+
+Communication barriers faced by hearing-impaired individuals inspired this project. By automating sign language recognition using deep learning, this system aims to:
+
+- Reduce dependency on human interpreters
+- Enable real-time gesture-to-text translation
+- Promote inclusivity through assistive technology
+
+---
+
+## 🧠 Model Architecture
+
+| Component        | Details                              |
+|-----------------|--------------------------------------|
+| Architecture    | Convolutional Neural Network (CNN)   |
+| Framework       | TensorFlow + Keras                   |
+| Input           | Video frames (gesture sequences)     |
+| Output          | Predicted word label per gesture     |
+| Training Data   | Labeled sign language gesture dataset|
+
+### Pipeline
+
+```
+Video Input → Frame Extraction → Preprocessing → CNN Model → Gesture Label (Word)
+```
+
+---
+
+## 🛠️ Tech Stack
+
+- **Python** — Core programming language
+- **TensorFlow / Keras** — Deep learning framework
+- **OpenCV** — Video capture and frame processing
+- **MediaPipe** *(optional)* — Hand landmark detection
+- **NumPy / Pandas** — Data handling
+- **Matplotlib** — Training visualization
+
+---
+
+## 📁 Project Structure
+
+```
+sign-language-detection/
+│
+├── dataset/                  # Labeled gesture dataset
+│   ├── train/
+│   ├── val/
+│   └── test/
+│
+├── model/
+│   ├── cnn_model.py          # CNN architecture definition
+│   ├── train.py              # Model training script
+│   └── saved_model/          # Trained model weights (.h5 / SavedModel)
+│
+├── utils/
+│   ├── preprocess.py         # Frame extraction & preprocessing
+│   └── predict.py            # Inference on video input
+│
+├── app.py                    # Main application / real-time detection
+├── requirements.txt          # Dependencies
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+```bash
+Python >= 3.8
+TensorFlow >= 2.x
+OpenCV
+```
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/sign-language-detection.git
+cd sign-language-detection
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### Train the Model
+
+```bash
+python model/train.py
+```
+
+### Run Real-Time Detection
+
+```bash
+python app.py
+```
+
+---
+
+## 📊 Results
+
+| Metric              | Value  |
+|--------------------|--------|
+| Training Accuracy  | ~XX%   |
+| Validation Accuracy| ~XX%   |
+| Test Accuracy      | ~XX%   |
+
+> *(Update with your actual model results)*
+
+---
+
+## 📷 Demo
+
+*(Add a GIF or screenshot of the real-time detection in action here)*
+
+---
+
+## 📂 Dataset
+
+The model was trained on a labeled sign language dataset where each gesture is mapped to a specific word. Each sample consists of video frames extracted from gesture clips.
+
+> If using a public dataset (e.g., ASL Dataset, WLASL), add citation and link here.
+
+---
+
+## 🔮 Future Scope
+
+- Expand vocabulary of detectable gestures
+- Add sentence-level prediction (not just words)
+- Deploy as a web or mobile application
+- Integrate text-to-speech for a complete communication loop
+- Support for regional sign languages (ISL, BSL, etc.)
+
+---
+
+## 👩‍💻 Author
+
+**Lahita**  
+B.Tech CSE — Sankethika Vidya Parishad Engineering College, Visakhapatnam  
+Certified in ML/DL | TensorFlow | OpenCV | MediaPipe
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+> *"Technology should work for everyone — including those the world often overlooks."*
